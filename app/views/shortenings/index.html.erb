@@ -20,8 +20,13 @@
 
   <h5>Recent short URLs</h5>
   <div class="d-flex flex-column gap-2">
-    <% @shortenings.each do |shortening| %>
-      <%= render shortening %>
+    <% if @shortenings.load.any? %>
+
+      <% @shortenings.each do |shortening| %>
+        <%= render shortening %>
+      <% end %>
+    <% else %>
+      <p class="bg-subtle rounded p-4">No short URLs yet.</p>
     <% end %>
   </div>
 </div>
