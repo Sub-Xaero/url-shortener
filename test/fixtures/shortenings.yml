@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: https://www.example.com/test
+  key: jASa1s2dTq4
+
+two:
+  url: https://www.example.com/test2
+  key: s1d2f3g4h5j6
