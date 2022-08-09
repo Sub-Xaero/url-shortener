@@ -1,9 +1,14 @@
 <div id="<%= dom_id shortening %>" class="card">
   <div class="card-body text-center">
 
-    <h5 class="card-title mb-4 p-3 rounded bg-subtle">
-      <%= link_to short_url(shortening), short_url(shortening), class: "text-dark text-decoration-none", target: "_blank" %>
-    </h5>
+    <div class="mb-4 p-3 rounded bg-subtle">
+      <div data-controller="clipboard" data-clipboard-success-content="Copied!" class="input-group d-flex">
+        <input type="text" value="<%= short_url(shortening) %>" readonly data-clipboard-target="source" class="form-control"/>
+        <button type="button" data-action="clipboard#copy" data-clipboard-target="button" class="btn btn-primary">Copy
+          to clipboard
+        </button>
+      </div>
+    </div>
 
     <div class="d-flex gap-2 justify-content-evenly">
       <p class="card-text">
