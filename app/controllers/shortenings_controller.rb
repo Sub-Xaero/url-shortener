@@ -2,7 +2,7 @@ class ShorteningsController < ApplicationController
   before_action :set_shortening, only: %i[ show edit update destroy ]
 
   def index
-    @shortenings = Shortening.all
+    @shortenings = Shortening.all.in_recency_order.limit(10)
   end
 
   def show
