@@ -1,8 +1,19 @@
 <%= render "shared/flash_notice" %>
 
-<h1>Welcome to Shortener</h1>
+<div class="text-center mt-4">
 
-<%= link_to "New short url", new_shortening_path, class: 'btn btn-primary' %>
+  <h1>Welcome to Shortener</h1>
+
+  <p class="mb-4">
+    To get started, click the "new short URL" button below.
+    <br>
+    Then paste the URL you want shortened into the box provided and submit.
+    <br>
+    You will be given a clean, short URL that you can share with anyone.
+  </p>
+  <%= link_to "New short url", new_shortening_path, class: 'btn btn-primary' %>
+</div>
+
 
 <hr>
 <div class="mt-5">
