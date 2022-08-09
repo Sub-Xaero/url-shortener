@@ -3,10 +3,14 @@ class UrlShortenerService
   class << self
 
     def create_short_mapping!(url)
-      key = generate_key
-      Shortening.create!(url: url, key: key)
-    rescue ActiveRecord::RecordNotUnique
-      retry
+      attempts = 0
+      begin
+        key = generate_key
+        Shortening.create!(url: url, key: key)
+      rescue ActiveRecord::RecordNotUnique
+        attempts += 1
+        retry if attempts < 10
+      end
     end
 
     def generate_key
