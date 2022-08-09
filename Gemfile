@@ -27,6 +27,7 @@ end
 
 group :test do
   gem "capybara" # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem "shoulda"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
