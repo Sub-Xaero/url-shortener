@@ -3,7 +3,9 @@
 one:
   url: https://www.example.com/test
   key: jASa1s2dTq4
+  visit_count: 23
 
 two:
   url: https://www.example.com/test2
   key: s1d2f3g4h5j6
+  visit_count: 0
