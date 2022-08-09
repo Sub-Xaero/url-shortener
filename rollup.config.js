@@ -1,4 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
+import scss from "rollup-plugin-scss";
 
 export default {
   input: "app/assets/javascript/application.js",
@@ -10,5 +11,8 @@ export default {
   },
   plugins: [
     resolve(),
+    scss({
+      sourceMap: true,
+    }),
   ],
 };
