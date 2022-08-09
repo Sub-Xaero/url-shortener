@@ -1,0 +1,9 @@
+<%= render 'shared/flash_notice' %>
+
+<%= render @shortening %>
+
+<div class="d-flex gap-2 ">
+  <%= link_to "Back", shortenings_path, class: "btn btn-secondary flex-grow-1" %>
+
+  <%= link_to "Destroy this shortening", @shortening, data: {turbo_method: :delete}, class: "btn btn-outline-danger flex-grow-1" %>
+</div>

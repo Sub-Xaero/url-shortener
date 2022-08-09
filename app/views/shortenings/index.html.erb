@@ -1,0 +1,16 @@
+<%= render "shared/flash_notice" %>
+
+<h1>Welcome to Shortener</h1>
+
+<%= link_to "New short url", new_shortening_path, class: 'btn btn-primary' %>
+
+<hr>
+<div class="mt-5">
+
+  <h5>Recent short URLs</h5>
+  <div class="d-flex flex-column gap-2">
+    <% @shortenings.each do |shortening| %>
+      <%= render shortening %>
+    <% end %>
+  </div>
+</div>

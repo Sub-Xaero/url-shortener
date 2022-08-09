@@ -1,0 +1,22 @@
+<%= form_with(model: shortening) do |form| %>
+  <% if shortening.errors.any? %>
+    <div class="text-danger">
+      <h2><%= pluralize(shortening.errors.count, "error") %> prohibited this URL from being saved:</h2>
+
+      <ul>
+        <% shortening.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :url, class: "form-label" %>
+    <%= form.text_field :url, class: "form-control" %>
+  </div>
+
+  <div class="form-group mt-4 d-flex gap-2">
+    <%= form.submit "Create", class: 'btn btn-primary flex-grow-1' %>
+  </div>
+<% end %>
