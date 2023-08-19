@@ -9,7 +9,7 @@ gem "bootsnap", require: false # Reduces boot times through caching; required in
 gem "jsbundling-rails" # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 # gem "kredis" # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 gem "propshaft" # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem "puma", "~> 5.0" # Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 5.6" # Use the Puma web server [https://github.com/puma/puma]
 gem "rails", "~> 7.0.3", ">= 7.0.3.1" # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "redis", "~> 4.0" # Use Redis adapter to run Action Cable in production
 gem "sqlite3", "~> 1.4" # Use sqlite3 as the database for Active Record
